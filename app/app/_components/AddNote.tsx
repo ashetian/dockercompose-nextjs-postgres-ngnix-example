@@ -23,8 +23,8 @@ const AddNote: React.FC<AddNoteProps> = ({ onAdd }) => {
     if (res.ok) {
       const data = await res.json();
       console.log('Created note:', data);
-      onAdd(data); // Add the new note to the list
-      setTitle(''); // Clear the input fields
+      onAdd(data);
+      setTitle('');
       setContent('');
     } else {
       console.error('Failed to add note');
@@ -49,7 +49,7 @@ const AddNote: React.FC<AddNoteProps> = ({ onAdd }) => {
         required
       />
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-purple-500 hover:bg-purple-700 rounded-full text-white font-bold py-2 px-4 ease-in-out duration-300"
         type="submit"
       >
         Add Note

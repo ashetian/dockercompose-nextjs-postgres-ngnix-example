@@ -51,12 +51,12 @@ const NoteList = () => {
       <AddNote onAdd={addNote} />
       <ul>
         {notes.map((note) => (
-          <li key={note.id} className="my-4">
+          <li key={note.id} className="my-4 ease-in-out delay-300">
             <h2 className="text-xl font-bold">{note.title}</h2>
             <p className="text-sm">{note.content}</p>
             <button
               onClick={() => deleteNote(note.id)}
-              className="bg-red-500 text-white px-2 py-1 rounded mt-2"
+              className="bg-red-500 hover:bg-red-700 ease-in-out delay-300 text-white px-2 py-1 rounded mt-2"
             >
               Delete
             </button>
